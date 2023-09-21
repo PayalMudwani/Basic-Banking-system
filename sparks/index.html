@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking system</title>
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">Basic Banking System</a>
+    <div class="icons">
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+    <nav class="navbar">
+      <a href="#main">Home</a>
+      <a href="#details">Customers</a>
+      <a href="#transfer-container"> Money Transfer</a>
+      <a href="#check-history">Transaction History</a>
+    </nav>
+  </header>
+
+  <!-- home section -->
+  <section class="home" id="main">
+    <div class='mainpage'>
+      <div id='intro'>
+        <h1 class="h1">Welcome ...!</h1>
+        <p> manage your money with our banking platform</p>
+      
+      </div>
+      
+    </div>
+
+  </section>
+  <!-- home section ends -->
+
+  <!-- features section  -->
+  <section class="features" id="features">
+    <h1 class="heading">our <span>Features</span></h1>
+    <div class="box-container">
+      <div class="box">
+        
+        <h3>view all customers</h3>
+      
+        <a href="#details" class="btn">read more</a>
+      </div>
+      <div class="box">
+        
+        <h3>Easy transaction</h3>
+       
+        <a href="#transfer-container" class="btn">read more</a>
+      </div>
+      <div class="box">
+        <img src="image/history.png" alt="">
+        <h3>check history</h3>
+        
+        <a href="#check-history" class="btn">read more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- table section -->
+  <section class="details" id="details">
+    <h2 class="heading">Account Details</h2>
+    <table id="accountTable">
+
+      <tr>
+        <th>Account No.</th>
+        <th>Email ID</th>
+        <th>Name</th>
+        <th>Balance</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>abc@gmail.com</td>
+        <td>abc</td>
+        <td>1000</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>James@gmail.com</td>
+        <td>James</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Jack@gmail.com</td>
+        <td>Jack</td>
+        <td>200</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>jenny@gmail.com</td>
+        <td>jenny</td>
+        <td>1000</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>william@gmail.com.com</td>
+        <td>william</td>
+        <td>3000</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>xyz@gmail.com</td>
+        <td>xyz</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>esh@gmail.com</td>
+        <td>Esh</td>
+        <td>8000</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>sam@gmail.com.com</td>
+        <td>sam</td>
+        <td>7000</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>joh@gmail.com</td>
+        <td>John</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>010</td>
+        <td>doe@gmil.com</td>
+        <td>doe</td>
+        <td>5000</td>
+      </tr>
+
+      <!-- Add more rows for other members -->
+    </table>
+  </section>
+
+  <div class="transfer-container" id="transfer-container">
+    <h2 class="heading">Transfer Money</h2>
+    <div class="transfer">
+      <label for="fromAccount">Sender:</label>
+      <select id="fromAccount">
+        <option value="001"> (1)</option>
+        <option value="002"> (2)</option>
+        <option value="003"> (3)</option>
+        <option value="004"> (4)</option>
+        <option value="005"> (5)</option>
+        <option value="006"> (6)</option>
+        <option value="007"> (7)</option>
+        <option value="008"> (8)</option>
+        <option value="009"> (9)</option>
+        <option value="010"> (10)</option>
+        <!-- Add options for other members -->
+      </select>
+      <br><br>
+      <label for="toAccount">Receiver:</label>
+      <select id="toAccount">
+        <option value="1"> (1)</option>
+        <option value="2"> (2)</option>
+        <option value="3"> (3)</option>
+        <option value="4"> (4)</option>
+        <option value="5"> (5)</option>
+        <option value="6"> (6)</option>
+        <option value="7"> (7)</option>
+        <option value="8"> (8)</option>
+        <option value="9"> (9)</option>
+        <option value="10"> (10)</option>
+        <!-- Add options for other members -->
+      </select>
+      <br><br>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" min="1">
+    </div>
+    <button class="btn button" onclick="transferMoney()">Transfer</button>
+  </div>
+
+  <section class="check-history" id="check-history">
+    <h2 class="transaction-history heading">Transaction History</h2>
+    <table id="transactionTable">
+      <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Amount</th>
+        <th>Balance</th>
+      </tr>
+    </table>
+  </section>
+
+
+  <script src="script1.js"></script>
+</body>
+
+</html>
